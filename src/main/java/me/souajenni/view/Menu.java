@@ -1,9 +1,12 @@
 package me.souajenni.view;
 
+import me.souajenni.controller.Conector;
+
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.SQLException;
 
 public class Menu extends JFrame{
     private JButton btCadastrar;
@@ -14,6 +17,9 @@ public class Menu extends JFrame{
     private JButton btRemoverAluno;
     private JButton btRemoverCurso;
     private JPanel painelMenu;
+    private Utils utils;
+    private Conector conector;
+    private Connection conexao;
 
     public Menu() {
         setContentPane(painelMenu);
@@ -21,6 +27,13 @@ public class Menu extends JFrame{
         setSize(400, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
+        utils = new Utils();
+        try {
+            conector = new Conector();
+            conexao = conector.getConexao();
+        } catch (SQLException e) {
+            utils.mostrarErro(e.getMessage());
+        }
 
         btCadastrar.addActionListener(new ActionListener() {
             @Override
