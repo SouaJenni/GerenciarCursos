@@ -7,7 +7,6 @@ public class Curso {
     private float preco;
     private int cargaHoraria;
     private int idCurso;
-    private List<Aluno> alunos;
 
     public String getNome() {
         return nome;
@@ -31,14 +30,6 @@ public class Curso {
 
     public void setCargaHoraria(int cargaHoraria) {
         this.cargaHoraria = cargaHoraria;
-    }
-
-    public List<Aluno> getAlunos() {
-        return alunos;
-    }
-
-    public void setAlunos(List<Aluno> alunos) {
-        this.alunos = alunos;
     }
 
     public int getIdCurso() {

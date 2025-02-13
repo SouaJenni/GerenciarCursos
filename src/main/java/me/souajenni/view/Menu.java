@@ -1,5 +1,6 @@
 package me.souajenni.view;
 
+import me.souajenni.DAO.AlunoDAO;
 import me.souajenni.controller.Conector;
 
 import javax.swing.*;
@@ -31,6 +32,8 @@ public class Menu extends JFrame{
         try {
             conector = new Conector();
             conexao = conector.getConexao();
+            AlunoDAO alunoDAO = new AlunoDAO(conexao);
+            alunoDAO.listarAlunos();
         } catch (SQLException e) {
             utils.mostrarErro(e.getMessage());
         }
