@@ -48,7 +48,6 @@ CREATE TABLE IF NOT EXISTS `dbCurso`.`Aluno` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
@@ -68,3 +67,28 @@ INSERT INTO aluno (nome, email, telefone, faltas, Curso_idCurso) VALUES ("José 
 INSERT INTO aluno (nome, email, telefone, faltas, Curso_idCurso) VALUES ("Maria Antonia", "maria@gmail.com", "99885544", 1, 1);
 INSERT INTO aluno (nome, email, telefone, faltas, Curso_idCurso) VALUES ("Reinaldo Manzoti", "reinaldo@gmail.com", "99332210", 2, 1);
 INSERT INTO aluno (nome, email, telefone, faltas, Curso_idCurso) VALUES ("Enzo Gabriel", "enzo@gmail.com", "30256789", 2, 1);
+
+INSERT INTO aluno (nome, email, telefone, faltas, Curso_idCurso) VALUES ("Hélio Roberto", "helio@gmail.com", "932502315", 0, 2);
+INSERT INTO aluno (nome, email, telefone, faltas, Curso_idCurso) VALUES ("Amanda Nunes", "mandy@gmail.com", "98765430", 3, 2);
+INSERT INTO aluno (nome, email, telefone, faltas, Curso_idCurso) VALUES ("Clara Maria", "clara@gmail.com", "80764312", 1, 2);
+INSERT INTO aluno (nome, email, telefone, faltas, Curso_idCurso) VALUES ("Patrick Almeida", "patrick@gmail.com", "30257898", 2, 2);
+
+INSERT INTO aluno (nome, email, telefone, faltas, Curso_idCurso) VALUES ("Julio Carlos", "julio@gmail.com", "91224750", 0, 3);
+INSERT INTO aluno (nome, email, telefone, faltas, Curso_idCurso) VALUES ("Claudinei Garcia", "claudinei@gmail.com", "90765530", 1, 3);
+INSERT INTO aluno (nome, email, telefone, faltas, Curso_idCurso) VALUES ("Eduarda Santos", "eduarda@gmail.com", "99097621", 4, 3);
+INSERT INTO aluno (nome, email, telefone, faltas, Curso_idCurso) VALUES ("Daniel Silva", "daniel@gmail.com", "97675540", 2, 3);
+
+INSERT INTO aluno (nome, email, telefone, faltas, Curso_idCurso) VALUES ("Adria Almeida", "adria@gmail.com", "90908865", 0, 4);
+INSERT INTO aluno (nome, email, telefone, faltas, Curso_idCurso) VALUES ("Jandira Costa", "jandira@gmail.com", "93451233", 1, 4);
+INSERT INTO aluno (nome, email, telefone, faltas, Curso_idCurso) VALUES ("Clara Nunes", "claranunes@gmail.com", "95678540", 1, 4);
+INSERT INTO aluno (nome, email, telefone, faltas, Curso_idCurso) VALUES ("Madalena Santos", "madalena@gmail.com", "30256654", 2, 4);
+
+INSERT INTO aluno (nome, email, telefone, faltas, Curso_idCurso) VALUES ("Denise Costa", "denise@gmail.com", "99421678", 4, 5);
+INSERT INTO aluno (nome, email, telefone, faltas, Curso_idCurso) VALUES ("Carlos Eduardo", "edu@gmail.com", "30256894", 1, 5);
+INSERT INTO aluno (nome, email, telefone, faltas, Curso_idCurso) VALUES ("Victor Manzoti", "victor@gmail.com", "87653748", 2, 5);
+INSERT INTO aluno (nome, email, telefone, faltas, Curso_idCurso) VALUES ("Bruno Silva", "bruno@gmail.com", "98761234", 0, 5);
+
+INSERT INTO aluno (nome, email, telefone, faltas, Curso_idCurso) VALUES ("Luan Garcia", "luan@gmail.com", "95642090", 0, 6);
+INSERT INTO aluno (nome, email, telefone, faltas, Curso_idCurso) VALUES ("Keler Santos", "keler@gmail.com", "87406644", 1, 6);
+INSERT INTO aluno (nome, email, telefone, faltas, Curso_idCurso) VALUES ("Taiara Abelardo", "tainara@gmail.com", "21764083", 2, 6);
+INSERT INTO aluno (nome, email, telefone, faltas, Curso_idCurso) VALUES ("Gabriel Silva", "gabriel@gmail.com", "65908721", 3, 6);
