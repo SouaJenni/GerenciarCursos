@@ -38,60 +38,47 @@ public class Menu extends JFrame{
             utils.mostrarErro(e.getMessage());
         }
 
-        btCadastrar.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                new CadastrarCurso();
-            }
-        });
+        btCadastrar.addActionListener(this::mostrarTelaCadastrarCruso);
 
+        btListar.addActionListener(this::mostrarTelaListarCursos);
 
-        btListar.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                new ListarCursos();
-            }
-        });
+        btListarAluno.addActionListener(this::mostrarTelaListarAluno);
 
+        btAdicionarAluno.addActionListener(this::mostrarTelaAdicionarAluno);
 
-        btListarAluno.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                new Buscar();
-            }
-        });
+        btAtualizar.addActionListener(this::buscarCursoParaAtualizar);
 
+        btRemoverAluno.addActionListener(this::buscarAlunoParaExcluir);
 
-        btAdicionarAluno.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                new AdicionarAluno();
-            }
-        });
+        btRemoverCurso.addActionListener(this::buscarCursoParaExcluir);
+    }
 
+    public void mostrarTelaCadastrarCruso(ActionEvent e) {
+        new CadastrarCurso();
+    }
 
-        btAtualizar.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                new Buscar();
-            }
-        });
+    public void mostrarTelaListarCursos(ActionEvent e) {
+        new ListarCursos();
+    }
 
+    public void mostrarTelaListarAluno(ActionEvent e) {
+        new Buscar();
+    }
 
-        btRemoverAluno.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                new Buscar();
-            }
-        });
+    public void mostrarTelaAdicionarAluno(ActionEvent e) {
+        new AdicionarAluno();
+    }
 
+    public void buscarCursoParaAtualizar(ActionEvent e) {
+        new Buscar();
+    }
 
-        btRemoverCurso.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                new Buscar();
-            }
-        });
+    public void buscarAlunoParaExcluir(ActionEvent e) {
+        new Buscar();
+    }
+
+    public void buscarCursoParaExcluir(ActionEvent e){
+        new Buscar();
     }
 
     public static void main(String[] args) {
