@@ -5,13 +5,15 @@ import me.souajenni.model.Aluno;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import java.util.List;
 
 public class ListarAluno extends JFrame {
     private JTable tabelaAluno;
     private JPanel painelListarAluno;
+    private JButton btVoltar;
     private Menu parent;
 
     public ListarAluno(Menu parent, int idCurso) {
@@ -38,5 +40,12 @@ public class ListarAluno extends JFrame {
             return;
         }
         tabelaAluno.setModel(modelo);
+
+        btVoltar.addActionListener(this::voltar);
+    }
+
+    public void voltar(ActionEvent e){
+        parent.setVisible(true);
+        dispose();
     }
 }

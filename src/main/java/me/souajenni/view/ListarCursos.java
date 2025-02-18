@@ -24,7 +24,6 @@ public class ListarCursos extends JFrame{
         setVisible(true);
         this.parent = parent;
 
-        btVoltar.addActionListener(this::voltar);
         String[] colunas = {"Nome", "Preço", "Carga Horaria"};
 
         DefaultTableModel modelo = new DefaultTableModel(colunas, 0);
@@ -43,6 +42,8 @@ public class ListarCursos extends JFrame{
             utils.mostrarErro(e.getMessage());
         }
         tabelaCursos.setModel(modelo);
+
+        btVoltar.addActionListener(this::voltar);
     }
 
     public void voltar(ActionEvent e) {

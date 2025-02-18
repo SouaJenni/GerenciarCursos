@@ -67,7 +67,7 @@ public class Menu extends JFrame{
     }
 
     public void mostrarTelaAdicionarAluno(ActionEvent e) {
-        new AdicionarAluno();
+        new AdicionarAluno(this);
     }
 
     public void buscarCursoParaAtualizar(ActionEvent e) {
