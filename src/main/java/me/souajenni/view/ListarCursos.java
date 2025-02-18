@@ -42,7 +42,6 @@ public class ListarCursos extends JFrame{
             Utils utils = new Utils();
             utils.mostrarErro(e.getMessage());
         }
-
         tabelaCursos.setModel(modelo);
     }
 
