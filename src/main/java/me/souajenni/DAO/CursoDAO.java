@@ -34,12 +34,22 @@ public class CursoDAO {
         return cursos;
     }
 
+    public int buscarCursoPorNome(String nome) throws SQLException {
+        Statement statement = this.conexao.createStatement();
+        String query = "select idCurso from curso where nome = \""+nome+"\"";
+        ResultSet resultado = statement.executeQuery(query);
+        int idCurso = -1;
+        while(resultado.next()) {
+            idCurso = resultado.getInt("idCurso");
+        }
+        return idCurso;
+    }
+
     public boolean inserirCurso(Curso curso) throws SQLException {
         Statement statement = this.conexao.createStatement();
-        DecimalFormat df = new DecimalFormat("##.00");
 
         String query = "insert into curso (nome, preco, cargaHoraria) values " +
-                "(\""+curso.getNome()+"\", "+df.format(curso.getPreco())+","+curso.getCargaHoraria()+")";
+                "(\""+curso.getNome()+"\", "+curso.getPreco()+","+curso.getCargaHoraria()+")";
         int linhas = statement.executeUpdate(query);
 
         return linhas >0;
@@ -47,9 +57,8 @@ public class CursoDAO {
 
     public int  atualizarCurso(Curso curso) throws SQLException {
         Statement statement = this.conexao.createStatement();
-        DecimalFormat df = new DecimalFormat("##.00");
 
-        String query = "update curso set nome = \""+curso.getNome()+"\", preco = "+df.format(curso.getPreco())+", " +
+        String query = "update curso set nome = \""+curso.getNome()+"\", preco = "+curso.getPreco()+", " +
                 "cargaHoraria = "+curso.getCargaHoraria()+" where id =" +curso.getIdCurso();
         int linhas = statement.executeUpdate(query);
 

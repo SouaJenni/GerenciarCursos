@@ -13,6 +13,11 @@ public class Utils {
 
     }
 
+    public void mostrarInformacao(String mensagem){
+        JOptionPane.showMessageDialog(null, mensagem, "Informção", JOptionPane.INFORMATION_MESSAGE);
+
+    }
+
     public int mostarConfirmacao(String mensagem){
         int opcao = JOptionPane.showConfirmDialog(null, mensagem, "Escolha uma opção", JOptionPane.YES_NO_OPTION);
         return opcao;

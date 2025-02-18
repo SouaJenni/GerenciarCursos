@@ -32,8 +32,6 @@ public class Menu extends JFrame{
         try {
             conector = new Conector();
             conexao = conector.getConexao();
-            AlunoDAO alunoDAO = new AlunoDAO(conexao);
-            alunoDAO.listarAlunos();
         } catch (SQLException e) {
             utils.mostrarErro(e.getMessage());
         }
@@ -54,15 +52,18 @@ public class Menu extends JFrame{
     }
 
     public void mostrarTelaCadastrarCruso(ActionEvent e) {
-        new CadastrarCurso();
+        new CadastrarCurso(this);
+        setVisible(false);
     }
 
     public void mostrarTelaListarCursos(ActionEvent e) {
-        new ListarCursos();
+        new ListarCursos(this);
+        setVisible(false);
     }
 
     public void mostrarTelaListarAluno(ActionEvent e) {
-        new Buscar();
+        new Buscar(this, "listarAluno");
+        setVisible(false);
     }
 
     public void mostrarTelaAdicionarAluno(ActionEvent e) {
@@ -70,15 +71,19 @@ public class Menu extends JFrame{
     }
 
     public void buscarCursoParaAtualizar(ActionEvent e) {
-        new Buscar();
+        new Buscar(this, "atualizarCurso");
     }
 
     public void buscarAlunoParaExcluir(ActionEvent e) {
-        new Buscar();
+        new Buscar(this, "excluirAluno");
     }
 
     public void buscarCursoParaExcluir(ActionEvent e){
-        new Buscar();
+        new Buscar(this, "excluirCurso");
+    }
+
+    public Connection getConexao() {
+        return conexao;
     }
 
     public static void main(String[] args) {
