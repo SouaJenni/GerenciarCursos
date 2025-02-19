@@ -59,7 +59,7 @@ public class CursoDAO {
         Statement statement = this.conexao.createStatement();
 
         String query = "update curso set nome = \""+curso.getNome()+"\", preco = "+curso.getPreco()+", " +
-                "cargaHoraria = "+curso.getCargaHoraria()+" where id =" +curso.getIdCurso();
+                "cargaHoraria = "+curso.getCargaHoraria()+" where idCurso =" +curso.getIdCurso();
         int linhas = statement.executeUpdate(query);
 
         return linhas;
@@ -74,5 +74,19 @@ public class CursoDAO {
         int linhas = statement.executeUpdate(query);
 
         return linhas > 0;
+    }
+
+    public Curso buscarPorId(int id) throws SQLException {
+        Statement statement = this.conexao.createStatement();
+        String query = "select * from curso where idCurso =" +id;
+        ResultSet resultado = statement.executeQuery(query);
+        Curso curso = new Curso();
+        while(resultado.next()) {
+            curso.setNome(resultado.getString("nome"));
+            curso.setIdCurso(resultado.getInt("idCurso"));
+            curso.setPreco(resultado.getFloat("preco"));
+            curso.setCargaHoraria(resultado.getInt("cargaHoraria"));
+        }
+        return curso;
     }
 }

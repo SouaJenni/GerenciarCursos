@@ -68,18 +68,22 @@ public class Menu extends JFrame{
 
     public void mostrarTelaAdicionarAluno(ActionEvent e) {
         new AdicionarAluno(this);
+        setVisible(false);
     }
 
     public void buscarCursoParaAtualizar(ActionEvent e) {
         new Buscar(this, "atualizarCurso");
+        setVisible(false);
     }
 
     public void buscarAlunoParaExcluir(ActionEvent e) {
         new Buscar(this, "excluirAluno");
+        setVisible(false);
     }
 
     public void buscarCursoParaExcluir(ActionEvent e){
         new Buscar(this, "excluirCurso");
+        setVisible(false);
     }
 
     public Connection getConexao() {

@@ -65,7 +65,7 @@ public class AlunoDAO {
     public boolean excluirAluno(String email) throws SQLException {
         Statement statement = this.conexao.createStatement();
 
-        String query = "delete from aluno where email =" +email;
+        String query = "delete from aluno where email = \"" +email+"\"";
         int linhas = statement.executeUpdate(query);
 
         return linhas > 0;
