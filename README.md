@@ -46,5 +46,10 @@ Para a utilização do banco de dados neste trabalho, criamos um DER (Diagrama d
 
 ![DER](./imagens/derCurso.png)
 
+Por fim, o diagrama de classes deste projeto:
+
+![Diagrama de Classes](./imagens/DiagramaDeClassesCurso.png)
+
+
 
 
